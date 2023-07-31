@@ -25,6 +25,7 @@ body {
 
 .navbar > img {
   margin-left: 0.7rem;
+  mix-blend-mode: multiply;
 }
 
 .gradient-background {
@@ -59,6 +60,8 @@ body {
   letter-spacing: 0.05rem;
   font-size: 5rem;
   margin-bottom: 1rem;
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .heroSection > p {
@@ -66,12 +69,18 @@ body {
   font-size: 20px;
   color: white;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
+.heroButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
 .heroButtonsLook {
   border-radius: 20px;
-  font-size: 15px;
-  padding: 10px 25px;
+  font-size: 20px;
+  padding: 1rem 5rem;
   border: 0px;
   background-color: #5c008b;
   color: white;
@@ -102,7 +111,7 @@ body {
 
 .sectionHeadings > h2 {
   font-size: 40px;
-  margin-bottom: 0;
+  margin: 0 0;
   color: white;
 }
 
@@ -168,6 +177,7 @@ body {
 
 .projectsContainer {
   background-color: #f3efe0;
+  padding: 3rem 0;
 }
 
 .projectsSection {
@@ -181,6 +191,11 @@ body {
   gap: 30px;
 }
 
+.projectCard {
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+}
+
 .projectCard > img {
   border-radius: 20px 20px 0 0;
   height: 200px;
@@ -189,7 +204,9 @@ body {
 
 .projectCard > h3 {
   font-family: "Roboto", sans-serif;
-  /* margin-left: 1rem; */
+  text-align: cetner;
+  padding: 1rem 0 1rem 1rem;
+  margin-bottom: 0;
 }
 
 .projectCard > ol {
@@ -198,16 +215,83 @@ body {
 }
 .projectCard > ol > li {
   list-style-type: none;
-  margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-size: 13px;
+  padding: 1rem;
+}
+
+.aboutContainer {
+  padding: 5rem;
+}
+
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.aboutHeadings > h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+}
+
+.aboutHeadings > span {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.aboutHeadings > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: white;
+  font-weight:900;
+}
+
+.leftContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftContainer > img {
+  height: 300px;
+  border: 15px solid #5c008b;
+  border-radius: 50%;
+}
+
+.rightContainer {
+  border: 15px solid #5c008b;
+  border-radius: 30px;
+  padding: 2rem;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/contactBackground.jpg");
+  padding: 5rem;
+
+}
+
+.footerContainer {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
 }
 
 /*iPad Screen*/
 @media screen and (min-width: 500px) and (max-width: 900px) {
   .heroSection > h1 {
-    font-size: 65px;
+    padding: 0 15px;
+    font-size: 60px;
+    text-align: center;
   }
 
   .heroSection > p {
@@ -252,11 +336,32 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
+  .aboutSection {
+    gap: 5rem;
+  }
+
+  .leftContainer > img {
+    height: 300px;
+    border: 7px solid #5c008b;
+    border-radius: 50%;
+  }
+  
+  .rightContainer {
+    border: 7px solid #5c008b;
+    border-radius: 30px;
+    padding: 2rem;
+  }
+
 }
 /*iPhone Screen*/
 @media screen and (min-width: 200px) and (max-width: 500px) {
   .heroSection > h1 {
-    font-size: 40px;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .heroButtons {
+    grid-template-columns: 1fr;
   }
 
   .sectionHeadings > p {
@@ -312,5 +417,23 @@ body {
     display: grid;
     grid-template-columns: 1fr; /* Each column takes equal width */
     gap: 10px;
+  }
+
+  .aboutSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 5rem;
+  }
+
+  .leftContainer > img {
+    height: 250px;
+    border: 7px solid #5c008b;
+    border-radius: 50%;
+  }
+  
+  .rightContainer {
+    border: 7px solid #5c008b;
+    border-radius: 30px;
   }
 }
