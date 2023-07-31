@@ -1,0 +1,316 @@
+body {
+  margin: 0px;
+  background-color: #f3efe0;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.5;
+  background-color: #fbfaf9;
+}
+
+.navbar > ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  flex: 0.5;
+}
+
+.navbar > ul > li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+.navbar > img {
+  margin-left: 0.7rem;
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, #5c008b, #ff8300, #ff6200);
+  background-size: 180% 180%;
+  animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.heroSection {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSection > h1 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  letter-spacing: 0.05rem;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.heroSection > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.heroButtonsLook {
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 10px 25px;
+  border: 0px;
+  background-color: #5c008b;
+  color: white;
+}
+
+.resumeBackground {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/pexels-luis-gomes-546819.jpg");
+  padding-top: 20px;
+}
+
+.resumeSection {
+  /* border: 2px solid black; */
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.sectionHeadings {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeadings > p {
+  font-size: 15px;
+  color: white;
+}
+
+.sectionHeadings > h2 {
+  font-size: 40px;
+  margin-bottom: 0;
+  color: white;
+}
+
+.cardsDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.titleBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ff8300;
+  border-radius: 20px;
+  margin: 3rem 10rem;
+}
+
+.titleBanner > img {
+  margin-right: 10px;
+}
+
+.titleBanner > h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.cardHome > img {
+  height: 100px;
+  mix-blend-mode: multiply;
+}
+
+.cardHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 21%;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 #2524245c;
+  background-color: white;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+
+.cardHome:hover {
+  box-shadow: 5px 5px 30px #ff8300;
+  transition: 0.3s;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.cardDetails > h3 {
+  margin-bottom: 0;
+}
+
+.projectsContainer {
+  background-color: #f3efe0;
+}
+
+.projectsSection {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.projectCard > img {
+  border-radius: 20px 20px 0 0;
+  height: 200px;
+  width: 100%;
+}
+
+.projectCard > h3 {
+  font-family: "Roboto", sans-serif;
+  /* margin-left: 1rem; */
+}
+
+.projectCard > ol {
+  padding: 0;
+  text-align: left;
+}
+.projectCard > ol > li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+/*iPad Screen*/
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .heroSection > h1 {
+    font-size: 65px;
+  }
+
+  .heroSection > p {
+    font-size: 18px;
+  }
+
+  .sectionHeadings > p {
+    font-size: 15px;
+  }
+
+  .sectionHeadings > h2 {
+    font-size: 30px;
+  }
+
+  .cardsDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+  }
+
+  .phoneTechStackDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardHome {
+    margin-bottom: 30px;
+  }
+
+  .cardHome > img {
+    height: 100px;
+    mix-blend-mode: multiply;
+  }
+
+  .cardDetails > h3 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+/*iPhone Screen*/
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  .heroSection > h1 {
+    font-size: 40px;
+  }
+
+  .sectionHeadings > p {
+    font-size: 15px;
+  }
+
+  .sectionHeadings > h2 {
+    font-size: 25px;
+  }
+
+  .cardDetails > h3 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .cardsDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phoneTechStackDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+
+  .cardHome {
+    width: 250px;
+    margin-right: 0;
+  }
+
+  .phoneCardHome {
+    width: 100px;
+  }
+
+  .cardHome > img {
+    height: 70px;
+  }
+
+  .titleBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff8300;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr; /* Each column takes equal width */
+    gap: 10px;
+  }
+}
