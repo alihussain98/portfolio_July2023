@@ -436,4 +436,8 @@ body {
     border: 7px solid #5c008b;
     border-radius: 30px;
   }
+
+  .footerContainer {
+    font-size: 13px;
+  }
 }
